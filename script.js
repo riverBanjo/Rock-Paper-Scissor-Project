@@ -10,6 +10,7 @@ function computerPlay(){
     }
 }
 
+// Returns result
 function playRound( playerSelection, computerSelection ){
     if( playerSelection === computerSelection ){
         return 'Draw!';
@@ -20,6 +21,7 @@ function playRound( playerSelection, computerSelection ){
     }
 }
 
+// Plays 5 rounds
 function game(){
     let gameCounter = 0;
     while( gameCounter < 5 ){
@@ -30,4 +32,5 @@ function game(){
     }
 }
 
+// Start game
 game();
