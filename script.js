@@ -21,9 +21,22 @@ function playRound( playerSelection, computerSelection ){
     }
 }
 
-// Takes a string and returns that string with a capital first letter and the rest of the string minus the first letter.
+// Takes a string and returns that string with a capital first letter.
 function capitalizeFirstLetter( word ){
     return word.charAt( 0 ).toUpperCase() + word.slice(1);
+}
+
+function checkUserInput( userInput ){
+    let isBadInput = true;
+    let lowerCaseUserInput = userInput.toLowerCase();
+    while( isBadInput ){
+        if( lowerCaseUserInput === 'rock' || lowerCaseUserInput === 'scissors' || lowerCaseUserInput === 'paper' ){
+            isBadInput = false;
+        }else{
+            lowerCaseUserInput = prompt( 'Invalid input. Please enter rock, paper, or scissors' ).toLowerCase();
+        }
+    }
+    return lowerCaseUserInput;
 }
 
 // Plays 5 rounds
@@ -31,7 +44,7 @@ function game(){
     let roundCounter = 0;
     while( roundCounter < 5 ){
         // Get's user input
-        let userInput = prompt( 'Enter rock, paper, or scissors.' );
+        let userInput = checkUserInput( prompt( 'Enter rock, paper, or scissors.' ) );
         let computerInput = computerPlay();
         // Logs output
         console.log( playRound( userInput, computerInput ) );
