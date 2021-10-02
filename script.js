@@ -21,6 +21,7 @@ function playRound( playerSelection, computerSelection ){
     }
 }
 
+// Takes a string and returns that string with a capital first letter and the rest of the string minus the first letter.
 function capitalizeFirstLetter( word ){
     return word.charAt( 0 ).toUpperCase() + word.slice(1);
 }
