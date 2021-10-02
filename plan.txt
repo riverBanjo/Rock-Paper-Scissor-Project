@@ -1,2 +1,18 @@
 Step 1 Explain the problem:
 Write a program that takes a user input and plays it against a computer who chooses either Rock, Paper, or Scissors randomly. It will play the game 5 times and whoever has more points wins.
+
+Step 2 Plan:
+When a user enters either Rock, Paper, or Scissors first we make their input to lower case to make our comparison easy.
+If the input is not equal to rock, paper, or scissors reprompt with an error message.
+Else take input and get computer input. 
+A random number between 1 and 3 will be generated for the computer choice.
+If computer choice equals 1 set choice to rock.
+If computer choice equals 2 set choice to paper.
+If computer choice equals 3 set choice to scissors.
+Compare user input to computer input.
+If user choice equals computer choice the round is a draw.
+If user choice equals rock and computer choice equals paper or if user choice equals paper and computer choice equals scissors or if user choice equals scissors and computer choice equals rock then user loses. Add 1 to computer wins. Log both computer and user wins.
+If user choice equals rock and computer choice equals scissors or if user choice equals paper and computer choice equals rock or if user choice equals scissors and computer choice equals paper then user wins. Add 1 to user wins. Log both computer and user wins.
+While our game counter is less than 5 we want to keep playing until either the Computer or the Player has 3 wins. (Best 3 of 5)
+Once 3 wins have been achieved by 1 party a message will be logged congratulating the winner.
+While our game is played 
