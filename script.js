@@ -26,14 +26,22 @@ function capitalizeFirstLetter( word ){
     return word.charAt( 0 ).toUpperCase() + word.slice(1);
 }
 
+// Checks user input. If input does not equal rock, paper, or scissors reprompt the user for valid input.
 function checkUserInput( userInput ){
     let isBadInput = true;
-    let lowerCaseUserInput = userInput.toLowerCase();
+    let lowerCaseUserInput;
+    // Assume it's always bad input
     while( isBadInput ){
-        if( lowerCaseUserInput === 'rock' || lowerCaseUserInput === 'scissors' || lowerCaseUserInput === 'paper' ){
-            isBadInput = false;
+        // This is in cases where a user might click cancel instead of OK
+        if( userInput === null ){
+            userInput = prompt( 'Null input. Please enter rock, paper, or scissors' );
         }else{
-            lowerCaseUserInput = prompt( 'Invalid input. Please enter rock, paper, or scissors' ).toLowerCase();
+            lowerCaseUserInput = userInput.toLowerCase();
+            if( lowerCaseUserInput === 'rock' || lowerCaseUserInput === 'scissors' || lowerCaseUserInput === 'paper' ){
+                isBadInput = false;
+            }else{
+                userInput = prompt( 'Invalid input. Please enter rock, paper, or scissors' );
+            }
         }
     }
     return lowerCaseUserInput;
