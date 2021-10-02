@@ -19,3 +19,15 @@ function playRound( playerSelection, computerSelection ){
         return 'You Win! ' + playerSelection + ' beats ' + computerSelection;
     }
 }
+
+function game(){
+    let gameCounter = 0;
+    while( gameCounter < 5 ){
+        let userInput = prompt( 'Enter rock, paper, or scissors.' );
+        let computerInput = computerPlay();
+        console.log( playRound( userInput, computerInput ) );
+        gameCounter++;
+    }
+}
+
+game();
