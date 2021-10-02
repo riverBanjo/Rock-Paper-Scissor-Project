@@ -12,10 +12,10 @@ function computerPlay(){
 
 function playRound( playerSelection, computerSelection ){
     if( playerSelection === computerSelection ){
-        return "Draw!";
+        return 'Draw!';
     }else if( ( playerSelection === 'rock' && computerSelection === 'paper' ) || ( playerSelection === 'paper' && computerSelection === 'scissors' ) || ( playerSelection === 'scissors' && computerSelection === 'rock' ) ){
-        return "You Lose! " + computerSelection + " beats " + playerSelection;
+        return 'You Lose! ' + computerSelection + ' beats ' + playerSelection;
     }else{
-        return "You Win! " + playerSelection + " beats " + computerSelection;
+        return 'You Win! ' + playerSelection + ' beats ' + computerSelection;
     }
 }
