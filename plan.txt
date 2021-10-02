@@ -1,0 +1,2 @@
+Step 1 Explain the problem:
+Write a program that takes a user input and plays it against a computer who chooses either Rock, Paper, or Scissors randomly. It will play the game 5 times and whoever has more points wins.
