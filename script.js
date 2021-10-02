@@ -10,7 +10,7 @@ function computerPlay(){
     }
 }
 
-// Returns result
+// Compares who won and returns result
 function playRound( playerSelection, computerSelection ){
     if( playerSelection === computerSelection ){
         return 'Draw!';
@@ -23,12 +23,14 @@ function playRound( playerSelection, computerSelection ){
 
 // Plays 5 rounds
 function game(){
-    let gameCounter = 0;
-    while( gameCounter < 5 ){
+    let roundCounter = 0;
+    while( roundCounter < 5 ){
+        // Get's user input
         let userInput = prompt( 'Enter rock, paper, or scissors.' );
         let computerInput = computerPlay();
+        // Logs output
         console.log( playRound( userInput, computerInput ) );
-        gameCounter++;
+        roundCounter++;
     }
 }
 
